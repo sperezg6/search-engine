@@ -79,8 +79,8 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-st.markdown('<p class="big-font">Exa Search Engine</p>', unsafe_allow_html=True)
-st.markdown('<p class="subheader">Powered by Exa API</p>', unsafe_allow_html=True)
+st.markdown('<p class="big-font">Search Engine</p>', unsafe_allow_html=True)
+st.markdown('<p class="subheader">Please Witr</p>', unsafe_allow_html=True)
 
 
 # Search input
@@ -107,12 +107,31 @@ if st.button("Search"):
     else:
         st.warning("Please enter a search query.")
 
-# Add some information about the app
+# Add information about the app in the sidebar
 st.sidebar.title("About")
-st.sidebar.info(
-    "This is a simple search engine app using the Exa API. "
-    "Enter your query in the search box and click 'Search' to get results."
-)
+st.sidebar.markdown("""
+    ### Exa Search Engine
+    
+    This app uses the Exa API to provide powerful web search capabilities.
+    
+    #### How to Use:
+    1. Enter your search query in the text box.
+    2. Click the 'Search' button or press Enter.
+    3. View the results displayed below the search bar.
+    4. Each result shows:
+       - Title (clickable link)
+       - URL
+       - Published date (if available)
+       - A brief extract from the page
+    
+    #### Tips:
+    - Be specific in your search queries for better results.
+    - Use quotation marks for exact phrase searches.
+    - Explore multiple results to find the most relevant information.
+    
+    Powered by Exa API | Created with Streamlit
+""")
+
 
 # Add a footer
 st.markdown(

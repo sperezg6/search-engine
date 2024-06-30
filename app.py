@@ -80,7 +80,8 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 st.markdown('<p class="big-font">Search Engine</p>', unsafe_allow_html=True)
-st.markdown('<p class="subheader">Please Witr</p>', unsafe_allow_html=True)
+st.markdown('<p class="subheader">Powered by Exa API</p>', unsafe_allow_html=True)
+
 
 
 # Search input

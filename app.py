@@ -33,7 +33,8 @@ if st.button("Search"):
             for result in results:
                 st.subheader(result.title)
                 st.write(result.url)
-                st.write(result.snippet)
+                if hasattr(result, 'text'):
+                    st.write(result.text[:500] + "..." if len(result.text) > 500 else result.text)
                 st.markdown("---")
         else:
             st.info("No results found.")
@@ -43,7 +44,7 @@ if st.button("Search"):
 # Add some information about the app
 st.sidebar.title("About")
 st.sidebar.info(
-    "This is a simple search engine app using the Exa API. "
+    "Search engine app using the Exa API. "
     "Enter your query in the search box and click 'Search' to get results."
 )
 

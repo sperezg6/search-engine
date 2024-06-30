@@ -29,6 +29,14 @@ st.markdown("""
         background-color: #2E3440;
         color: #D8DEE9;
     }
+    .big-font {
+        font-size:50px !important;
+        color: #88C0D0;
+    }
+    .subheader {
+        font-size:30px !important;
+        color: #81A1C1;
+    }
     .stTextInput > div > div > input {
         background-color: #3B4252;
         color: #D8DEE9;
@@ -71,8 +79,9 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-# Streamlit app
-st.title("Exa Search Engine")
+st.markdown('<p class="big-font">Exa Search Engine</p>', unsafe_allow_html=True)
+st.markdown('<p class="subheader">Powered by Exa API</p>', unsafe_allow_html=True)
+
 
 # Search input
 query = st.text_input("Enter your search query:")

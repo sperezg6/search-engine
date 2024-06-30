@@ -18,7 +18,7 @@ def search(query, num_results=10):
         return []
 
 # Streamlit app
-st.title("Exa Search Engine")
+st.title("Search Engine")
 
 # Search input
 query = st.text_input("Enter your search query:")
@@ -33,8 +33,7 @@ if st.button("Search"):
             for result in results:
                 st.subheader(result.title)
                 st.write(result.url)
-                if hasattr(result, 'text'):
-                    st.write(result.text[:500] + "..." if len(result.text) > 500 else result.text)
+                st.write(result.content)
                 st.markdown("---")
         else:
             st.info("No results found.")

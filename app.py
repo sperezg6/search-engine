@@ -33,7 +33,8 @@ if st.button("Search"):
             for result in results:
                 st.subheader(result.title)
                 st.write(result.url)
-                st.write(result.content)
+                st.write(result.published_date)
+                st.write(result.extract)
                 st.markdown("---")
         else:
             st.info("No results found.")

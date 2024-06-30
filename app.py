@@ -90,7 +90,7 @@ if st.button("Search"):
                     <div class="result-title">{result.title}</div>
                     <div class="result-url">{result.url}</div>
                     <div class="result-date">{result.published_date}</div>
-                    <div class="result-extract">{result.extract}</div>
+                    <div class="result-extract">{result.text}</div>
                 </div>
                 """, unsafe_allow_html=True)
         else:

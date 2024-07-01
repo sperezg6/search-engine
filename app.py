@@ -80,7 +80,17 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 st.markdown('<p class="big-font">Search Engine</p>', unsafe_allow_html=True)
-st.markdown('<p class="subheader">Powered by Exa API</p>', unsafe_allow_html=True)
+# Welcome message and description
+st.markdown('''
+<div class="welcome-section">
+    <p class="subheader">Welcome to the Search Engine!</p>
+    <p class="description">
+        Discover the power of intelligent web search. Our engine, powered by the Exa API, 
+        provides you with accurate and relevant results from across the internet. 
+        Whether you're researching, exploring, or just curious, start your journey here!
+    </p>
+</div>
+''', unsafe_allow_html=True)
 
 
 

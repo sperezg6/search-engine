@@ -1,4 +1,4 @@
-# Exa Search Engine Streamlit App
+# Search Engine Streamlit App
 
 ## Overview
 

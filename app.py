@@ -105,14 +105,25 @@ if st.button("Search"):
         
         if results:
             for result in results:
-                st.markdown(f"""
-                <div class="result-card">
-                    <div class="result-title">{result.title}</div>
-                    <div class="result-url">{result.url}</div>
-                    <div class="result-date">{result.published_date}</div>
-                    <div class="result-extract">{result.text}</div>
-                </div>
-                """, unsafe_allow_html=True)
+                if result.text:
+                    st.markdown(f"""
+                    <div class="result-card">
+                        <div class="result-title">{result.title}</div>
+                        <div class="result-url">{result.url}</div>
+                        <div class="result-date">{result.published_date}</div>
+                        <div class="result-extract">{result.author}</div>
+                        <div class="result-extract">{result.text}</div>
+                    </div>
+                    """, unsafe_allow_html=True)
+                else:
+                    st.markdown(f"""
+                    <div class="result-card">
+                        <div class="result-title">{result.title}</div>
+                        <div class="result-url">{result.url}</div>
+                        <div class="result-date">{result.published_date}</div>
+                        <div class="result-extract">{result.author}</div>
+                    </div>
+                    """, unsafe_allow_html=True)
         else:
             st.info("No results found.")
     else:

@@ -140,7 +140,6 @@ st.sidebar.markdown("""
     - Use quotation marks for exact phrase searches.
     - Explore multiple results to find the most relevant information.
     
-    Powered by Exa API | Created with Streamlit
 """)
 
 
